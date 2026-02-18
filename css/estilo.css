@@ -1,0 +1,279 @@
+/* From Uiverse.io by faxriddin20 */
+.ui-btn {
+  --btn-default-bg: rgb(41, 41, 41);
+  --btn-padding: 15px 20px;
+  --btn-hover-bg: rgb(51, 51, 51);
+  --btn-transition: 0.3s;
+  --btn-letter-spacing: 0.1rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow-color: rgba(0, 0, 0, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: lime;
+  --default-btn-color: #fff;
+  --font-size: 16px;
+  /* 👆 this field should not be empty */
+  --font-weight: 600;
+  --font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
+}
+
+/* button settings 👆 */
+
+.ui-btn {
+  box-sizing: border-box;
+  padding: var(--btn-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-btn-color);
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  border: none;
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+}
+
+.ui-btn span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+}
+
+.ui-btn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.ui-btn:hover,
+.ui-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.ui-btn:hover span,
+.ui-btn:focus span {
+  color: var(--hover-btn-color);
+}
+
+.ui-btn:hover span::before,
+.ui-btn:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".";
+  }
+
+  10% {
+    content: "^{";
+  }
+
+  15% {
+    content: "-!";
+  }
+
+  20% {
+    content: "#$_";
+  }
+
+  25% {
+    content: "№:0";
+  }
+
+  30% {
+    content: "#{+.";}35%{content: "@}-?";
+  }
+
+  40% {
+    content: "?{4@%";
+  }
+
+  45% {
+    content: "=.,^!";
+  }
+
+  50% {
+    content: "?2@%";
+  }
+
+  55% {
+    content: "\;1}]";
+  }
+
+  60% {
+    content: "?{%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+
+  90% {
+    content: "4";
+    right: 0;
+  }
+
+  95% {
+    content: "2";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}
+
+/*------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0d1821;
+}
+
+
+/*toda a calc*/
+
+.calculadora {
+    background-color: #0e1a24;
+    padding: 40px 20px 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+/*onde aparece o result*/
+
+#display {
+    width: 100%;
+    height: 80px;
+    /* Altura fixa: ele nunca vai crescer além disso */
+    font-size: 2rem;
+    /* Letra bem grande */
+    text-align: right;
+    /* Centralização vertical do texto dentro do input */
+    line-height: 80px;
+    /* Mesma altura do visor para o texto ficar no meio */
+    /* Espaçamento interno sem estufar */
+    padding: 0 15px;
+    /* 0 em cima/baixo e 15px nas laterais */
+    /* O SEGREDO: garante que o padding não aumente o tamanho total */
+    box-sizing: border-box;
+    background-color: #0e1a24;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    /* Remove a borda ao clicar */
+    margin-bottom: 15px;
+}
+
+#display {
+    border-right: 3px solid #2ecc71;
+    /* A linha do cursor */
+    padding-right: 5px;
+    animation: blink 0.98s infinite step-end;
+    /* A mágica acontece aqui */
+}
+
+
+/* Define a animação: ora a borda é visível, ora é transparente */
+
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #0371ae;
+    }
+}
+
+
+/*controla a grade de botões, não individual*/
+
+.teclas {
+    display: grid;
+    /* Cria 4 colunas de tamanhos iguais */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    font-size: 30px;
+    grid-auto-rows: 60px;
+}
+
+button {
+    font-size: 2.5rem;
+    /* Aumente aqui conforme o seu gosto (ex: 24px, 1.8rem) */
+    font-weight: bold;
+    border: none;
+    background-color: rgba(36, 71, 91, 0.23);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #1c596357;
+}
+
+.operator {
+    background-color: #0371ae;
+}
+
+.operator:hover {
+    background-color: dodgerblue;
+}
+
+.igual {
+    background-color: rgb(0, 255, 100);
+    grid-row: span 2;
+}
+
+.igual:hover {
+    background-color: #00dfb2fd
+}
+
+.zero {
+    grid-column: span 2;
+}
