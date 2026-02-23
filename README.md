@@ -6,7 +6,7 @@
 
 
 <img src="https://codeberg.org/ildem96/Calculadora_projeto_final_disc/raw/branch/main/assests/Anima%C3%A7%C3%A3o.gif" width="400">
-[More_on_CodePen](https://codepen.io/Ildem96/pens)
+[CodePen](https://codepen.io/Ildem96/pens)
 
 
 
