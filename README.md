@@ -6,7 +6,7 @@
 
 
 <img src="https://raw.githubusercontent.com/ildem96/Projeto-Final-Calc/refs/heads/master/assests/calcu.png" width="400">
-[More on CodePen](https://codepen.io/Ildem96/pens)
+[More_on_CodePen](https://codepen.io/Ildem96/pens)
 
 
 
